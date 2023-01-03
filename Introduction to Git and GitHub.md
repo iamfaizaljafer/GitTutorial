@@ -60,8 +60,8 @@ Using "git init" we change the normal folder to a git repository.
 
 You must configure your username and email ID for git to understand who is making the commits. This needs to be done only once in your system.
 
-- git config --global user.name "themohamedfaizal"
-- git config --global user.email "themohamedfaizal@gmail.com"
+- git config --global user.name "iamfaizaljafer"
+- git config --global user.email "iamfaizaljafer@gmail.com"
 
 ## Git Stages:
 
