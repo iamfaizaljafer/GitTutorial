@@ -140,4 +140,90 @@ index 0000000..ce01362
 ```
 
 
+# We can collaborate with others using GitHub:
+Local Repository ?
+In your local system, when you exceute the command “git init” it becomes a Local Repository.
+Remote Repository
+When we create a Repository in a remote server, which enables us to share our code with everyone; It becomes a Remote Repository.
+Types of Version Control system
 
+## Examples of Distributed Remote Repositories
+- GitHub
+- Bitbucket
+- GitLab
+- GitHub
+- GitHub is a repository hosting service. It provides web-based GUI.
+
+## Features of GitHub
+- Collaboration.
+- Integrated issue and bug tracking.
+- Graphical representation of the branches.
+- Git repo hosting.
+- Project / team management.
+- Code hosting.
+- Track and assign tasks.
+
+## What does GitHub do ?
+- Manage projects with Repositories
+- Clone a project to work on a local copy
+- Control and track changes with Staging and Committing
+- Branch and Merge to allow for work on different parts and versions of a project
+- Pull the latest version of the project to a local copy
+- Push local updates to the main project
+
+## Create a GitHub Account
+Please go to the website https://github.com/ and create an account for yourself. This could be used as the remote repository.
+
+## Config and pushing code to remote Repo
+We can add GitHub to out git as remote.
+```
+git remote add origin https://github.com/iamfaizaljafer/proj1.git
+git remote -v
+origin  https://github.com/iamfaizaljafer/proj1.git (fetch)
+origin  https://github.com/iamfaizaljafer/proj1.git (push)
+```
+We can push our code to GitHub using the below command.
+```
+git push origin master
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (6/6), 430 bytes | 215.00 KiB/s, done.
+To https://github.com/iamfaizaljafer/proj1.git
+ * [new branch]      master -> master
+```
+Make some changes and try pushing it again.
+```
+$ cat>> file1
+have a great day!
+$ git add file1
+$ git commit -m "third commit"
+[master 70b4d50] third commit
+ 1 file changed, 1 insertion(+)
+$ git push origin master
+Writing objects: 100% (3/3), 269 bytes | 269.00 KiB/s, done.
+   68cab96..70b4d50  master -> master
+```
+
+## What is origin?
+When we add the GitHub URL as remote, we give a short reference for this link as origin. So instead of using the whole link, we can use the reference origin.
+```
+$ git remote -v
+origin  https://github.com/iamfaizaljafer/proj1.git (fetch)
+origin  https://github.com/iamfaizaljafer/proj1.git (push)
+$ git remote remove origin
+$ git remote -v
+$ git remote add faizal https://github.com/iamfaizaljafer/proj1.git
+$ git remote -v
+faizal  https://github.com/iamfaizaljafer/proj1.git (fetch)
+faizal  https://github.com/iamfaizaljafer/proj1.git (push)
+$ git push faizal master
+Everything up-to-date
+```
+- git pull
+We can pull the code from GitHub using the below command.
+```
+mkdir testpull
+cd testpull/
+git init
+git remote add origin https://github.com/iamfaizaljafer/git-class.git
+git pull origin master
+```
